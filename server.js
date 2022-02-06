@@ -1,13 +1,13 @@
 const express = require("express");
 const db = require('./db');
 
-
 const clientesRouter = require('./router/clientes.router');
 
 const  PORT = 3000;
 const server = express();
 
 server.use('/clientes', clientesRouter);
+
 server.get('/', (req, res) => {
     res.status(200).send('Server is up & running');
 });
