@@ -11,7 +11,7 @@ const Destinaciones = [
     { ciudad : "Amsterdan", pais: "Holanda"}
 ]
 
-const destinacionDocuments = destinacion.map(destinacion => new Destinacion(destinacion));
+const destinacionDocuments = destinaciones.map(destinacion => new Destinacion(destinacion));
 db.connectDB()
     .then(async () => {
         const todosLasDestinaciones = await Destinacion.find();

@@ -2,11 +2,11 @@ const mongoose = require('mongoose');
 const db = require('../db');
 const Aerolinea = require('../models/Aerolinea');
 
-const Aerolineas = [
-    { nombre: "Avianca"},
-    { nombre: "Vueling"},
-    { nombre: "Iberia"},
-    { nombre: "KLM"}
+const aerolineas = [
+    { nombre: "Avianca", destinacion: "Lima"},
+    { nombre: "Vueling",destinacion: "Paris"},
+    { nombre: "Iberia", destinacion: "Lisboa"},
+    { nombre: "KLM", destinacion: "Amsterdam"}
 ]
 
 const aerolineasDocuments = aerolineas.map(aerolinea => new Aerolinea(aerolinea));

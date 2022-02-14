@@ -1,9 +1,9 @@
 const express = require('express');
 const Aerolinea = require('../models/Aerolinea');
 
-const aerolineasRouter = express.Router();
+const aerolineaRouter = express.Router();
 
-aerolineasRouter.get('/', (req, res, next) => {
+aerolineaRouter.get('/', (req, res, next) => {
     return Aerolinea.find()
         .then(aerolineas => {
             return res.status(200).json(aerolineas);
@@ -14,3 +14,5 @@ aerolineasRouter.get('/', (req, res, next) => {
             return next(error);
         });
 });
+
+module.exports = aerolineaRouter;
