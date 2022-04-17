@@ -3,11 +3,11 @@ const db = require('../db');
 const Cliente = require('../models/Cliente');
 
 const clientes = [
-    { nombre: 'Marta', apellido: 'Perez', edad: 31 },
-    { nombre: 'Andrea', apellido: 'Martinez', edad: 26 },
-    { nombre: 'Erica', apellido: 'Sanchez', edad: 23 },
-    { nombre: 'Vanesa', apellido: 'Burgos', edad: 30 },
-    { nombre: 'Claudia', apellido: 'de Luis', edad: 21 },
+    { nombre: 'Marta', apellido: 'Perez', edad: 31, destinacion:"Paris", aerolinea: "Vueling" },
+    { nombre: 'Andrea', apellido: 'Martinez', edad: 26, destinacion:"NYC", aerolinea: "KLM" },
+    { nombre: 'Erica', apellido: 'Sanchez', edad: 23, destinacion:"Lima", aerolinea: "Avianca" },
+    { nombre: 'Vanesa', apellido: 'Burgos', edad: 30, destinacion:"Amsterdan", aerolinea: "KLM" },
+    { nombre: 'Claudia', apellido: 'de Luis', edad: 21, destinacion:"Lisboa", aerolinea: "Iberia" },
 ];
 
 const clientesDocuments = clientes.map(cliente => new Cliente(cliente));

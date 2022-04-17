@@ -7,6 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.js",
     "poblar:clientes": "node ./seeds/cliente.seed.js",
+    "poblar:destinaciones": "node ./seeds/destinacion.seed.js",
+    "poblar:aerolineas": "node ./seed/aerolinea.seed.js",
     "start": "node server.js"
   },
   "repository": {
@@ -24,7 +26,9 @@
     "nodemon": "^2.0.15"
   },
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "express": "^4.17.2",
-    "mongoose": "^6.2.0"
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.0"
   }
 }
