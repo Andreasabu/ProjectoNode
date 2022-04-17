@@ -38,7 +38,7 @@ clientesRouter.post('/', (req, res, next) => {
         nombre: req.body.nombre,
         edad: req.body.edad,
         apellido: req.body.apellido,
-        destinacion: [],
+        destinaciones: [],
     })
     return nuevoCliente.save()
         .then(() => {
@@ -51,13 +51,13 @@ clientesRouter.post('/', (req, res, next) => {
         });
 });
 
-clientesRouter.put('/:id/destinacion', (req, res, next) => {
+clientesRouter.put('/:id/destinaciones', (req, res, next) => {
     const clienteId = req.params.id;
-    const idDestinacionAAnadir = req.body.cocheId;
+    const idDestinacionAAnadir = req.body.destinacionId;
 
     return Cliente.findByIdAndUpdate(
         clienteId,
-        { $push: { coches: idDestinacionAAnadir } },
+        { $push: { destinaciones: idDestinacionAAnadir } },
         { new: true }
     )
         .then(clienteActualizado => {

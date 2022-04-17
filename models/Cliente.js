@@ -5,8 +5,8 @@ const clienteSchema =  new Schema({
         nombre: { type: String, required: true},
         apellido: { type: String, required: true },
         edad: { type: Number }, 
-        destinacion: [{ type: mongoose.Types.ObjectId, ref: 'Destinacion'}],
-        aerolinea: { type: String, required: true }
+        destinaciones: [{ type: mongoose.Types.ObjectId, ref: 'Destinacion'}],
+        // aerolinea: { type: String, required: true }
     }, {
         timestamps: true
     });

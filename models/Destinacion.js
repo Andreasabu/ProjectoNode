@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 const destinacionSchema =  new Schema({
     ciudad: { type: String, required: true},
     pais: { type: String, required: true },
-    aerolinea: { type: String }
+    anno: {type: number},
+    aerolineas: [{ type: mongoose.Types.ObjectId, ref: 'Aerolinea'}],
 }, {
     timestamps: true
 });

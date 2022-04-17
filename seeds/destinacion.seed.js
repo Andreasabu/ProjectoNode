@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const db = require('../db');
 const Destinacion = require('../models/Destinacion');
 
-const Destinaciones = [
+const destinaciones = [
     { ciudad : "Paris", pais: "Francia"},
     { ciudad : "NYC", pais: "USA"},
     { ciudad : "Lima", pais: "Peru"},

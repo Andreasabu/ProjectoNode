@@ -2,7 +2,7 @@ const passport = require('passport');
 const passportLocal = require('passport-local');
 const bcrypt = require('bcrypt');
 
-const Usuario = require('../models/Usuario');
+const Usuario = require('../models/Cliente');
 
 const LocalStrategy = passportLocal.Strategy;
 

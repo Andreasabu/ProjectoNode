@@ -3,7 +3,8 @@ const Schema = mongoose.Schema;
 
 const aerolineaSchema =  new Schema({
         nombre: { type: String, required: true},
-        destinacion: { type: String }
+        destinacion: { type: String, required: true},
+        flota: { type: Number},
        
     }, {
         timestamps: true
